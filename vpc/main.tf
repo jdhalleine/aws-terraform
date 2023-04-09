@@ -29,7 +29,7 @@ resource "aws_subnet" "public_subnet_az1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-public-az1"
+    Name = "${var.project_name}-${var.environment}-public-az1"
   }
 }
 
@@ -41,7 +41,7 @@ resource "aws_subnet" "public_subnet_az2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-public-az2"
+    Name = "${var.project_name}-${var.environment}-public-az2"
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_route_table" "public_route_table" {
   }
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-public-rt"
+    Name = "${var.project_name}-${var.environment}-public-rt"
   }
 }
 
@@ -79,7 +79,7 @@ resource "aws_subnet" "private_app_subnet_az1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-private-app-az1"
+    Name = "${var.project_name}-${var.environment}-private-app-az1"
   }
 }
 
@@ -91,7 +91,7 @@ resource "aws_subnet" "private_app_subnet_az2" {
     map_public_ip_on_launch = false
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-private-app-az2"
+    Name = "${var.project_name}-${var.environment}-private-app-az2"
   }
 }
 
@@ -103,7 +103,7 @@ resource "aws_subnet" "private_data_subnet_az1" {
     map_public_ip_on_launch = false
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-private-data-az1"
+    Name = "${var.project_name}-${var.environment}-private-data-az1"
   }
 }
 
@@ -115,6 +115,6 @@ resource "aws_subnet" "private_data_subnet_az2" {
     map_public_ip_on_launch = false
 
   tags = {
-    Name = "${var.project_name}-${var.environement}-private-data-az2"
+    Name = "${var.project_name}-${var.environment}-private-data-az2"
   }
 }
