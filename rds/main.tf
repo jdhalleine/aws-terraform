@@ -19,7 +19,7 @@ resource "aws_db_instance" "db_instance" {
   password             = var.db_password
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
-  db_subnet_group_name = aws_db_subnet_group.database_subnet_group
+  db_subnet_group_name = aws_db_subnet_group.database_subnet_group.name
   multi_az             = false
   vpc_security_group_ids = [var.database_security_group_id]
   identifier             = "dev-rds-db"
