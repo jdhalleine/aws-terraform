@@ -30,6 +30,8 @@ resource "aws_lb_target_group" "alb_target_group" {
     timeout             = 5
     unhealthy_threshold = 2
   }
+
+  
 }
 
 # create a listener on port 80 with redirect action
@@ -40,7 +42,8 @@ resource "aws_lb_listener" "alb_http_listener" {
 
   default_action {
     type = "redirect"
-
+    target_group_arn = aws_lb_target_group.alb_target_group.arn
+    
     redirect {
       port        = 443
       protocol    = "HTTPS"
