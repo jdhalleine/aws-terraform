@@ -93,5 +93,4 @@ resource "aws_ecs_service" "ecs_service" {
     container_port   = 80
   }
 
-  depends_on = [aws_lb_listener.alb_http_listener]
 }
